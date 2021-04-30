@@ -1,0 +1,202 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"PopupHTTMethod": {
+					"type": "dropdown",
+					"left": 6,
+					"top": 7,
+					"width": 71,
+					"height": 27,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.request.method",
+					"choiceList": [
+						"GET",
+						"POST",
+						"PUT",
+						"DELETE",
+						"PATCH",
+						"HEAD",
+						"OPTIONS"
+					]
+				},
+				"Input": {
+					"type": "input",
+					"left": 85,
+					"top": 7,
+					"width": 369,
+					"height": 27,
+					"method": "ObjectMethods/Input.4dm",
+					"dataSource": "Form:C1466.request.url"
+				},
+				"send": {
+					"type": "button",
+					"text": "Send",
+					"top": 7,
+					"left": 462,
+					"width": 67,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/send.4dm"
+				},
+				"Splitter": {
+					"type": "splitter",
+					"left": 535,
+					"top": 7,
+					"width": 444,
+					"height": 491
+				},
+				"Text": {
+					"type": "text",
+					"text": "Status",
+					"top": 11,
+					"left": 556,
+					"width": 52,
+					"height": 16,
+					"fontWeight": "bold"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 615,
+					"top": 12,
+					"width": 166,
+					"height": 17,
+					"dataSource": "Form:C1466.response.statusCodeMessage()",
+					"enterable": false,
+					"focusable": false
+				},
+				"Input2": {
+					"type": "input",
+					"left": 999,
+					"top": 12,
+					"width": 68,
+					"height": 17,
+					"dataSource": "Form:C1466.response.time",
+					"enterable": false,
+					"focusable": false
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Time",
+					"top": 12,
+					"left": 927,
+					"width": 52,
+					"height": 16,
+					"fontWeight": "bold"
+				},
+				"Tab Control": {
+					"type": "tab",
+					"text": "Tab control",
+					"top": 59,
+					"left": 556,
+					"width": 511,
+					"height": 439
+				},
+				"Input3": {
+					"type": "input",
+					"left": 578,
+					"top": 98,
+					"width": 177,
+					"height": 385,
+					"dataSource": "Form:C1466.response.bodyText()",
+					"enterable": false,
+					"focusable": false
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 775,
+					"top": 122,
+					"width": 271,
+					"height": 361,
+					"events": [
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"dataSource": "OB Entries:C1720(Form:C1466.response.headers)",
+					"listboxType": "collection",
+					"columns": [
+						{
+							"header": {
+								"text": "Header",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.key"
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Value",
+								"dataSource": ""
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.value"
+						}
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Response Headers ",
+					"top": 98,
+					"left": 776,
+					"width": 189,
+					"height": 16,
+					"fontWeight": "bold"
+				}
+			}
+		}
+	],
+	"geometryStamp": 87,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

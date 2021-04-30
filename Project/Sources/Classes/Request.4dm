@@ -3,7 +3,6 @@
 Class constructor
 	This:C1470.method:=HTTP GET method:K71:1
 	This:C1470.headers:=New object:C1471()
-	This:C1470.url:="https://developer.4d.com/"
 	
 	
 Function bodyBlob()->$blob : Blob

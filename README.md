@@ -4,7 +4,7 @@ Simple 4D interface to launch HTTP Request inspired from [Postman](https://www.p
 
 ## Feature
 
-- Send request on URL
+- Send request with URL and HTTP Method
 - Display status code
 
 ## TODO

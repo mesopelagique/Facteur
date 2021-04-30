@@ -1,0 +1,8 @@
+{
+    "message": "Welcome to Facteur",
+    "about": "Facteur is a lightweight HTTP/Rest API Client component for 4D.",
+    "createdBy": "mesopelagique (Eric Marchand)",
+    "github": "https://mesopelagique.github.io/Facteur/",
+    "testing": "Welcome url can be used for testing json",
+    "support": "For Bugs & Feature requests please submit on github"
+}
